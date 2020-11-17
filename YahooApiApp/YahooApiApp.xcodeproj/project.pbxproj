@@ -16,6 +16,7 @@
 		523E70D22545C78300331E5F /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E70D02545C78300331E5F /* ResultTableViewCell.swift */; };
 		523E70D32545C78300331E5F /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 523E70D12545C78300331E5F /* ResultTableViewCell.xib */; };
 		523E70D52547BD3E00331E5F /* YahooApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E70D42547BD3E00331E5F /* YahooApiData.swift */; };
+		52ECE61B255A25910082190B /* SeeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECE61A255A25910082190B /* SeeImageViewController.swift */; };
 		624596B4939C7BBE91BD2CB0 /* Pods_YahooApiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713252949138C972974DCF7E /* Pods_YahooApiApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		523E70D02545C78300331E5F /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		523E70D12545C78300331E5F /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		523E70D42547BD3E00331E5F /* YahooApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooApiData.swift; sourceTree = "<group>"; };
+		52ECE61A255A25910082190B /* SeeImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeImageViewController.swift; sourceTree = "<group>"; };
 		713252949138C972974DCF7E /* Pods_YahooApiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YahooApiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				523E70BE2545C6DA00331E5F /* SceneDelegate.swift */,
 				523E70C02545C6DA00331E5F /* SearchViewController.swift */,
 				523E70D02545C78300331E5F /* ResultTableViewCell.swift */,
+				52ECE61A255A25910082190B /* SeeImageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				523E70BD2545C6DA00331E5F /* AppDelegate.swift in Sources */,
 				523E70D22545C78300331E5F /* ResultTableViewCell.swift in Sources */,
 				523E70D52547BD3E00331E5F /* YahooApiData.swift in Sources */,
+				52ECE61B255A25910082190B /* SeeImageViewController.swift in Sources */,
 				523E70BF2545C6DA00331E5F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class ResultTableViewCell: UITableViewCell {
     
@@ -14,6 +16,7 @@ class ResultTableViewCell: UITableViewCell {
     @IBOutlet weak var streetAddress: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var imageViewDisplay: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +27,22 @@ class ResultTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
+    }
+    func setUpCell(yahooApiData:YahooApiData){
+        
+        storeTitle.text = yahooApiData.name
+        streetAddress.text = yahooApiData.adress
+        phoneNumber.text = yahooApiData.tellNumber
+        category.text = yahooApiData.category
+        
+        if let leadImageString = yahooApiData.leadImage{
+        AF.request(leadImageString).responseImage { (response) in
+            print(response)
+            if let image = response.value{
+                self.imageViewDisplay.image = image
+            }
+        }
+        }
     }
     
 }
