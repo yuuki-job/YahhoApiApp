@@ -17,6 +17,12 @@ class YahooApiData {
     var catchCopy:String?
     var rating:String?
     var genreName:String?
+    //緯度
+    var lat:String?
+    //経度
+    var lon:String?
+    
+    
     
     
     
@@ -35,6 +41,14 @@ class YahooApiData {
                     genreName = genre["Name"] as? String
                 }
             }
+        }
+        //緯度経度
+        if let geometry = dicData["Geometry"] as? [AnyHashable: Any]{
+            let coordinates = geometry["Coordinates"] as? String
+            let splitCoordinates = coordinates?.components(separatedBy: ",")
+            lat = splitCoordinates?[0]
+            lon = splitCoordinates?[1]
+            print(lat,lon)
         }
         if let nameData = dicData["Name"] as? String{
             name = nameData

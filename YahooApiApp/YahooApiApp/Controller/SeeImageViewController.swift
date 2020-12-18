@@ -28,6 +28,15 @@ class SeeImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        imageDisplayView.layer.cornerRadius = 20.0
+        catchCopyLabel.layer.cornerRadius = 20.0
+        
+        storeTitleLabel.layer.shadowColor = UIColor.black.cgColor //影の色を決める
+        storeTitleLabel.layer.shadowOpacity = 1 //影の色の透明度
+        storeTitleLabel.layer.shadowRadius = 8 //影のぼかし
+        storeTitleLabel.layer.shadowOffset = CGSize(width: 4, height: 4) //影の方向　width、heightを負の値にすると上の方に影が表示される
+        
         adressLabel.layer.borderColor = UIColor.black.cgColor
         //let url = URL(string: data)
         //imageDisplayView.image = displayData[index].leadImage

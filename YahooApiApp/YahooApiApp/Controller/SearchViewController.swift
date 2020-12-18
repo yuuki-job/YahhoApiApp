@@ -36,7 +36,7 @@ class SearchViewController: UIViewController {
         guard let kyeWord = keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             return
         }
-        let url = "https://map.yahooapis.jp/search/local/V1/localSearch?appid=dj00aiZpPWR4QVI4SzBLZ2xZNCZzPWNvbnN1bWVyc2VjcmV0Jng9NWE-&query=\(kyeWord)&device=mobile&output=json"
+        let url = "https://map.yahooapis.jp/search/local/V1/localSearch?appid=dj00aiZpPWR4QVI4SzBLZ2xZNCZzPWNvbnN1bWVyc2VjcmV0Jng9NWE-&query=\(kyeWord)&device=mobile&output=json&"
         
         AF.request(url, method: .get, parameters: nil, encoding:JSONEncoding.default).responseJSON { (response) in
             
