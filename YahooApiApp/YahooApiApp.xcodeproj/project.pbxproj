@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523D1299258E403100807093 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D1298258E403100807093 /* MapViewController.swift */; };
 		523E70BD2545C6DA00331E5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E70BC2545C6DA00331E5F /* AppDelegate.swift */; };
 		523E70BF2545C6DA00331E5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E70BE2545C6DA00331E5F /* SceneDelegate.swift */; };
 		523E70C12545C6DA00331E5F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E70C02545C6DA00331E5F /* SearchViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		10CD8A1ADF1F6F6814C04ACE /* Pods-YahooApiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YahooApiApp.debug.xcconfig"; path = "Target Support Files/Pods-YahooApiApp/Pods-YahooApiApp.debug.xcconfig"; sourceTree = "<group>"; };
 		35AFC20724BCF3DF0CDCACE5 /* Pods-YahooApiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YahooApiApp.release.xcconfig"; path = "Target Support Files/Pods-YahooApiApp/Pods-YahooApiApp.release.xcconfig"; sourceTree = "<group>"; };
+		523D1298258E403100807093 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		523E70B92545C6DA00331E5F /* YahooApiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YahooApiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523E70BC2545C6DA00331E5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523E70BE2545C6DA00331E5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				523E70C02545C6DA00331E5F /* SearchViewController.swift */,
 				523E70D02545C78300331E5F /* ResultTableViewCell.swift */,
 				52ECE61A255A25910082190B /* SeeImageViewController.swift */,
+				523D1298258E403100807093 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				523E70D52547BD3E00331E5F /* YahooApiData.swift in Sources */,
 				52ECE61B255A25910082190B /* SeeImageViewController.swift in Sources */,
 				523E70BF2545C6DA00331E5F /* SceneDelegate.swift in Sources */,
+				523D1299258E403100807093 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

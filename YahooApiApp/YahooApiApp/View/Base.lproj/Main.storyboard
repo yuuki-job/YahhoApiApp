@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--検索一覧-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="YahooApiApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J4g-Bb-Gyj">
-                                <rect key="frame" x="0.0" y="224" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="227" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="11I-R0-P34">
@@ -37,9 +37,9 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLP-52-O4B">
-                                <rect key="frame" x="170" y="182" width="74" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="share"/>
+                                <rect key="frame" x="170" y="182" width="74" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="検索"/>
                                 <connections>
                                     <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBL-kA-ZeR"/>
                                 </connections>
@@ -61,7 +61,7 @@
                             <constraint firstItem="JvC-zW-Gbi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="x2r-Xb-Qhk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8aK-vA-wiB"/>
+                    <navigationItem key="navigationItem" title="検索一覧" id="8aK-vA-wiB"/>
                     <connections>
                         <outlet property="searchText" destination="JvC-zW-Gbi" id="lsM-Mo-rZe"/>
                         <outlet property="tableView" destination="J4g-Bb-Gyj" id="5Qr-iT-xmm"/>
@@ -80,11 +80,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5w6-ms-MWO">
-                                <rect key="frame" x="65" y="242" width="285" height="294"/>
+                                <rect key="frame" x="52" y="231" width="311" height="286"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc7-eq-VVB">
-                                <rect key="frame" x="65" y="544" width="285" height="55"/>
+                                <rect key="frame" x="52" y="525" width="311" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -98,7 +98,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndt-sH-UcR">
-                                <rect key="frame" x="65" y="607" width="285" height="229"/>
+                                <rect key="frame" x="52" y="607" width="311" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -118,15 +118,23 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjU-Ud-49q">
-                                <rect key="frame" x="135" y="190" width="119" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjU-Ud-49q">
+                                <rect key="frame" x="136" y="178" width="143" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-vz-dkz">
-                                <rect key="frame" x="52" y="108" width="311" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9No-jh-KKv">
+                                <rect key="frame" x="116" y="779" width="182" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextButton:" destination="JpC-6N-sCv" eventType="touchUpInside" id="7hD-Jl-4Jy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-vz-dkz">
+                                <rect key="frame" x="52" y="95" width="311" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
@@ -149,6 +157,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfP-2Y-FM6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1705.7971014492755" y="117.85714285714285"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="GSg-cJ-Ax6">
+            <objects>
+                <viewController storyboardIdentifier="map" id="iuk-tk-sTq" customClass="MapViewController" customModule="YahooApiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3bc-zZ-sK3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kLk-bw-Wn7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxd-l7-7SU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem id="DtX-q6-QMM"/>
+                                    <barButtonItem style="plain" id="d4N-es-QRk">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ez6-K2-cgU">
+                                            <rect key="frame" x="71" y="5.5" width="343" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="地図"/>
+                                                <segment title="写真"/>
+                                                <segment title="地図＋写真"/>
+                                                <segment title="3D"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="changeMapType:" destination="iuk-tk-sTq" eventType="valueChanged" id="pSt-rg-9JR"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tc7-mb-dTy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lxd-l7-7SU" firstAttribute="trailing" secondItem="Tc7-mb-dTy" secondAttribute="trailing" id="TZU-j3-A3l"/>
+                            <constraint firstItem="kLk-bw-Wn7" firstAttribute="leading" secondItem="Tc7-mb-dTy" secondAttribute="leading" id="Xlo-rI-Mmj"/>
+                            <constraint firstItem="lxd-l7-7SU" firstAttribute="leading" secondItem="Tc7-mb-dTy" secondAttribute="leading" id="a8p-WP-3Lq"/>
+                            <constraint firstItem="kLk-bw-Wn7" firstAttribute="top" secondItem="lxd-l7-7SU" secondAttribute="bottom" id="cAJ-0Q-Vdg"/>
+                            <constraint firstItem="kLk-bw-Wn7" firstAttribute="bottom" secondItem="Tc7-mb-dTy" secondAttribute="bottom" id="exe-g2-cLK"/>
+                            <constraint firstItem="lxd-l7-7SU" firstAttribute="top" secondItem="Tc7-mb-dTy" secondAttribute="top" id="faf-ol-ycY"/>
+                            <constraint firstItem="kLk-bw-Wn7" firstAttribute="trailing" secondItem="Tc7-mb-dTy" secondAttribute="trailing" id="fby-kH-RXD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="kLk-bw-Wn7" id="nV7-Ul-BDh"/>
+                        <outlet property="toolBar" destination="lxd-l7-7SU" id="cZy-TD-j3g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHq-Mh-V5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2669.5652173913045" y="127.90178571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="58s-aG-W3j">

@@ -92,7 +92,12 @@ extension SearchViewController:UITableViewDelegate,UITableViewDataSource {
         let seeImageVC = self.storyboard?.instantiateViewController(withIdentifier: "next") as! SeeImageViewController
         seeImageVC.displayData = indicateJsonData
         seeImageVC.index = indexPath.row
-        //performSegue(withIdentifier: "next", sender: nil)
+        
+        //mapViewControllerに送る
+        /*let mapVC = self.storyboard?.instantiateViewController(identifier: "map") as! MapViewController
+        mapVC.yahooApiData = indicateJsonData
+        mapVC.indexNum = indexPath.row
+        //performSegue(withIdentifier: "next", sender: nil)*/
         self.navigationController?.pushViewController(seeImageVC, animated: true)
     }
 }

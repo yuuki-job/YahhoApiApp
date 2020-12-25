@@ -46,8 +46,8 @@ class YahooApiData {
         if let geometry = dicData["Geometry"] as? [AnyHashable: Any]{
             let coordinates = geometry["Coordinates"] as? String
             let splitCoordinates = coordinates?.components(separatedBy: ",")
-            lat = splitCoordinates?[0]
-            lon = splitCoordinates?[1]
+            lat = splitCoordinates?[1]
+            lon = splitCoordinates?[0]
             print(lat,lon)
         }
         if let nameData = dicData["Name"] as? String{

@@ -56,4 +56,15 @@ class SeeImageViewController: UIViewController {
         }
     }
     
+    @IBAction func nextButton(_ sender: Any) {
+        
+        //mapViewControllerに送る
+        let mapVC = self.storyboard?.instantiateViewController(identifier: "map") as! MapViewController
+        mapVC.yahooApiData = displayData
+        mapVC.indexNum = index
+        //performSegue(withIdentifier: "next", sender: nil)
+        
+        self.navigationController?.pushViewController(mapVC, animated: true)
+    }
+    
 }
