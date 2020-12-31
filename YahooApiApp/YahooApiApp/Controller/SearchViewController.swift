@@ -43,7 +43,7 @@ class SearchViewController: UIViewController {
             switch response.result{
             
             case .success(let value):
-                print(value)
+                
                 
                 /*if let property = value["Property"] as? [AnyHashable: Any] {
                  print(property["Address"])
@@ -89,15 +89,22 @@ extension SearchViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let seeImageVC = self.storyboard?.instantiateViewController(withIdentifier: "next") as! SeeImageViewController
+        let seeImageVC = self.storyboard?.instantiateViewController(withIdentifier: "SeeImageViewController") as! SeeImageViewController
         seeImageVC.displayData = indicateJsonData
         seeImageVC.index = indexPath.row
         
         //mapViewControllerに送る
         /*let mapVC = self.storyboard?.instantiateViewController(identifier: "map") as! MapViewController
-        mapVC.yahooApiData = indicateJsonData
-        mapVC.indexNum = indexPath.row
-        //performSegue(withIdentifier: "next", sender: nil)*/
+         mapVC.yahooApiData = indicateJsonData
+         mapVC.indexNum = indexPath.row
+         //performSegue(withIdentifier: "next", sender: nil)*/
+        
+        /*let segmentVC = self.storyboard?.instantiateViewController(withIdentifier: "SegmentViewController") as! SegmentViewController
+         
+         let mapVC = self.storyboard?.instantiateViewController(identifier: "MapViewController") as! MapViewController
+         mapVC.yahooApiData = indicateJsonData
+         mapVC.indexNum = indexPath.row*/
+        
         self.navigationController?.pushViewController(seeImageVC, animated: true)
     }
 }

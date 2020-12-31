@@ -48,7 +48,7 @@ class YahooApiData {
             let splitCoordinates = coordinates?.components(separatedBy: ",")
             lat = splitCoordinates?[1]
             lon = splitCoordinates?[0]
-            print(lat,lon)
+            //print(lat,lon)
         }
         if let nameData = dicData["Name"] as? String{
             name = nameData

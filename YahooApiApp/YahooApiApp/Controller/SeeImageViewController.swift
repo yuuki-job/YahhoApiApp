@@ -16,15 +16,15 @@ class SeeImageViewController: UIViewController {
     var seeAdress:String?
     var displayData:[YahooApiData] = []
     var index = 0
-    
+    let border = CALayer()
+    // ボタンを用意
+    var addBtn: UIBarButtonItem!
     
     @IBOutlet weak var imageDisplayView: UIImageView!
     @IBOutlet weak var adressLabel: UILabel!
     @IBOutlet weak var catchCopyLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var storeTitleLabel: UILabel!
-    @IBOutlet weak var genreNameLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +44,7 @@ class SeeImageViewController: UIViewController {
         catchCopyLabel.text = displayData[index].catchCopy
         ratingLabel.text = displayData[index].rating
         storeTitleLabel.text = displayData[index].name
-        genreNameLabel.text = displayData[index].genreName
+        //genreNameLabel.text = displayData[index].genreName
         
         if let leadImageString = displayData[index].leadImage{
             AF.request(leadImageString).responseImage { (response) in
@@ -54,9 +54,15 @@ class SeeImageViewController: UIViewController {
                 }
             }
         }
+        //ラベルのボトムに線を引く
+        border.frame = CGRect(x: 0, y: adressLabel.frame.height - 0.3, width: self.view.frame.width, height: 0.3)
+        border.backgroundColor = UIColor.black.cgColor
+        adressLabel.layer.addSublayer(border)
+        
+        //コードでrightBarButtonItemを書いた
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "地図", style: .plain, target: self, action: #selector(nextButton))
     }
-    
-    @IBAction func nextButton(_ sender: Any) {
+    @objc func nextButton() {
         
         //mapViewControllerに送る
         let mapVC = self.storyboard?.instantiateViewController(identifier: "map") as! MapViewController
