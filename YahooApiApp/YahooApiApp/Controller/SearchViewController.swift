@@ -43,19 +43,13 @@ class SearchViewController: UIViewController {
             switch response.result{
             
             case .success(let value):
-                
-                
-                /*if let property = value["Property"] as? [AnyHashable: Any] {
-                 print(property["Address"])
-                 }*/
+                //Cadobleでも
                 if let data = value as? [AnyHashable:Any],
                    let feature = data["Feature"] as? [[AnyHashable:Any]] {
                     let serchResults = feature.compactMap({ (value) -> YahooApiData? in
                         
-                        let asd = value
-                        
-                        //電話だとvalue[0]["Property"]["Address"]　or　value["Property"]["Address"]
-                        return YahooApiData(dicData: asd)
+                        let data = value
+                        return YahooApiData(dicData: data)
                     })
                     
                     self.indicateJsonData = serchResults
