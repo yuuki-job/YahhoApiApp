@@ -89,23 +89,11 @@ extension SearchViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let seeImageVC = self.storyboard?.instantiateViewController(withIdentifier: "SeeImageViewController") as! SeeImageViewController
-        seeImageVC.displayData = indicateJsonData
-        seeImageVC.index = indexPath.row
+        let segmentVC = self.storyboard?.instantiateViewController(withIdentifier: "segmentVC") as! SegmentViewController
+        segmentVC.sendDisplayData = indicateJsonData
+        segmentVC.sendIndex = indexPath.row
         
-        //mapViewControllerに送る
-        /*let mapVC = self.storyboard?.instantiateViewController(identifier: "map") as! MapViewController
-         mapVC.yahooApiData = indicateJsonData
-         mapVC.indexNum = indexPath.row
-         //performSegue(withIdentifier: "next", sender: nil)*/
-        
-        /*let segmentVC = self.storyboard?.instantiateViewController(withIdentifier: "SegmentViewController") as! SegmentViewController
-         
-         let mapVC = self.storyboard?.instantiateViewController(identifier: "MapViewController") as! MapViewController
-         mapVC.yahooApiData = indicateJsonData
-         mapVC.indexNum = indexPath.row*/
-        
-        self.navigationController?.pushViewController(seeImageVC, animated: true)
+        self.navigationController?.pushViewController(segmentVC, animated: true)
     }
 }
 /*
